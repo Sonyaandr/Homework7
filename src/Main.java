@@ -68,19 +68,16 @@ public class Main {
         int day = 1;
         while (day < 32) {
             System.out.println("Сегодня пятница, " + day + "-е число. Необходимо подготовить отчет");
-            day = day + 7;
-            if (counter < 6) {
-                counter++;
-            } else {
-                break;
-            }
+            day += 7;
         }
         System.out.println("Задание 8");
         int nowYear = 2024;
         year = nowYear - 200;
         while ((year <= nowYear + 100) && (year >= nowYear - 200)) {
-            System.out.println(year);
-            year += 79;
+            if (year % 79 == 0) {
+                System.out.println(year);
+            }
+            year++;
         }
     }
 }
